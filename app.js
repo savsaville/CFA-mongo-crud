@@ -17,9 +17,12 @@ var jwt = require('jsonwebtoken');
 var token = jwt.sign({ email: 'richardsaville@gmail.com'}, 'secretcode');
 console.log(token)
 
+const mlabpassword = process.env.DBPASSWORD
+
 var mongoose = require('mongoose');
 // database is called recipes
-mongoose.connect('mongodb://localhost/recipes')
+mongoose.connect(`mongodb://richierich:${mlabpassword}@ds143131.mlab.com:43131/mongo-crud`)
+
 const { connection: db } = mongoose;
 
 db.on('error', console.error.bind(console, 'connection error:'));
