@@ -12,7 +12,7 @@ router.get('/ingredients/:id/edit', ingredientController.editIngredients);
 
 router.post('/ingredients/:id/edit', ingredientController.updateIngredients);
 
-// router.delete('/ingredients/:id/delete', ingredientController.deleteIngredients);
+router.get('/ingredients/:id/delete', ingredientController.deleteIngredients);
 
 //api
 
@@ -23,6 +23,8 @@ router.post('/api', ingredientController.createApiIngredients);
 router.get('/api/:id', ingredientController.getIngredientApi);
 
 router.post('/api/:id/edit', ingredientController.updateApiIngredients);
+
+router.delete('/api/ingredients/:id', ingredientController.deleteIngredientApi);
 
 
 
