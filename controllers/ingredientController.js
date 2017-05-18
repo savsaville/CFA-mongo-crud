@@ -34,7 +34,7 @@ let ingredient = new Ingredient();
 ingredient.name = name;
 ingredient.save()
   .then(() => {
-    res.json(ingredients)
+    res.json(ingredient)
   })
 };
 
